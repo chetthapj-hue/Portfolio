@@ -1,0 +1,134 @@
+.skills-section {
+  min-height: 100vh;
+
+  padding: 120px 80px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-top {
+  text-align: center;
+
+  max-width: 900px;
+}
+
+.skills-mini {
+  color: var(--primary);
+
+  letter-spacing: 5px;
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+.skills-top h1 {
+  font-size: 68px;
+
+  line-height: 1.2;
+}
+
+.skills-top h1 span {
+  background: linear-gradient(45deg, #67e8f9, #c084fc);
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.skills-desc {
+  margin-top: 25px;
+
+  color: var(--text-soft);
+
+  font-size: 18px;
+
+  line-height: 2;
+}
+
+.skills-grid {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 35px;
+  border-radius: 28px;
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.05),
+    0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(135deg, rgba(192, 132, 252, 0.15), transparent);
+
+  opacity: 0;
+
+  transition: var(--transition);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 0 20px rgba(192, 132, 252, 0.18),
+    0 0 50px rgba(192, 132, 252, 0.08);
+}
+.skill-card img {
+  width: 70px;
+  height: 70px;
+
+  object-fit: contain;
+
+  margin-bottom: 25px;
+
+  margin-inline: auto;
+}
+
+.skill-card h3 {
+  font-size: 24px;
+
+  margin-bottom: 15px;
+
+  color: var(--text-main);
+}
+
+.skill-card p {
+  color: var(--text-soft);
+
+  line-height: 1.8;
+
+  font-size: 15px;
+  flex-grow: 1;
+}

@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #050816;
+
+  --text-main: #ffffff;
+  --text-soft: #cfcfcf;
+
+  --primary: #c084fc;
+  --secondary: #7c3aed;
+
+  --glass-bg: rgba(255, 255, 255, 0.05);
+
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  --shadow-purple: 0 0 20px rgba(147, 51, 234, 0.4);
+
+  --transition: all 0.35s ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+
+  font-family: "Poppins", sans-serif;
+
+  color: white;
+
+  background: var(--bg-dark);
+
+  overflow-x: hidden;
+
+  position: relative;
+}
+.aurora {
+  position: fixed;
+
+  inset: -200px;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(168, 85, 247, 0.22),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(59, 130, 246, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(236, 72, 153, 0.15),
+      transparent 32%
+    );
+
+  filter: blur(80px);
+
+  animation: auroraMove 18s ease-in-out infinite alternate;
+}
+section {
+  scroll-margin-top: 80px;
+}
+
+button {
+  margin-top: 45px;
+
+  padding: 16px 34px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: linear-gradient(45deg, #ff00cc, #7c3aed);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+button:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 0 20px #9333ea;
+}
+img {
+  max-width: 100%;
+
+  display: block;
+}
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+::selection {
+  background: #9333ea;
+
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9333ea;
+}
+.menu-container {
+  animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.container-width {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 0 40px;
+}
+@keyframes auroraMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(60px, -40px) scale(1.15);
+  }
+}
+
+body.light {
+  color: #111827;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 170, 220, 0.1),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(120, 180, 255, 0.1),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #2e3349, #000208, #c9c2d8);
+
+  background-size: 200% 200%;
+
+  animation: bgMove 12s ease infinite;
+}
+body.light .desc,
+body.light p,
+body.light span {
+  filter: brightness(0) invert(1) drop-shadow(0 0 5px #07171a);
+}
+
+.light .left h1 {
+  color: rgb(67, 12, 219);
+}
+body.light .tech-card {
+  background: rgba(255, 255, 255, 0.18);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(18px);
+}
+#topBtn {
+  position: fixed;
+
+  bottom: 15px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  z-index: 999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  line-height: 1;
+
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.35),
+    inset 0 0 15px rgba(255, 255, 255, 0.03);
+}
+
+#topBtn i {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+#topBtn:hover {
+  transform: translateY(-8px) scale(1.08);
+
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.35),
+    rgba(59, 130, 246, 0.35)
+  );
+
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.8),
+    0 0 50px rgba(59, 130, 246, 0.4);
+}
+.stars {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      2px 2px at 20px 30px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      2px 2px at 140px 80px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 90px 120px,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(
+      2px 2px at 250px 200px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 320px 40px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    );
+
+  background-size: 400px 400px;
+
+  animation: starsMove 120s linear infinite;
+
+  opacity: 0.45;
+
+  z-index: -1;
+}
+
+@keyframes starsMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-300px);
+  }
+}
+
+.loader {
+  position: fixed;
+
+  inset: 0;
+
+  background: linear-gradient(135deg, #050816, #0b1023, #111827);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+
+  overflow: hidden;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+.loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader-content {
+  text-align: center;
+}
+.loader-logo {
+  font-size: 90px;
+
+  color: #a855f7;
+
+  text-shadow:
+    0 0 20px rgba(168, 85, 247, 0.6),
+    0 0 60px rgba(59, 130, 246, 0.3);
+
+  animation: pulseLogo 2s ease-in-out infinite;
+}
+
+@keyframes pulseLogo {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+.loader-text {
+  margin-top: 20px;
+
+  color: #cbd5e1;
+
+  letter-spacing: 4px;
+
+  font-size: 14px;
+
+  text-transform: uppercase;
+}
+.loader-bar {
+  width: 260px;
+  height: 6px;
+
+  margin-top: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.loader-bar span {
+  display: block;
+
+  width: 0%;
+  height: 100%;
+
+  background: linear-gradient(90deg, #a855f7, #38bdf8);
+
+  border-radius: inherit;
+
+  animation: loadingBar 2.5s ease forwards;
+}
+
+@keyframes loadingBar {
+  to {
+    width: 100%;
+  }
+}

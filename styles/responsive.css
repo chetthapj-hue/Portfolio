@@ -1,0 +1,136 @@
+/* ===== TABLET ===== */
+
+@media (max-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .allmenu {
+    transform: translateX(0);
+  }
+
+  .menu-container {
+    left: 0;
+    width: min(360px, 90vw);
+    height: min(360px, 90vw);
+  }
+
+  .menu-container.active ul.menu li {
+    transform: translate(-50%, -50%) rotate(calc(360deg / 6 * var(--i) - 90deg))
+      translate(150px) rotate(calc(-360deg / 6 * var(--i) + 90deg));
+  }
+
+  .theme-toggle {
+    right: 20px;
+    top: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-section {
+    padding: 80px 20px;
+  }
+
+  .about-left h1 {
+    text-align: center;
+  }
+
+  .about-mini,
+  .about-text {
+    text-align: center;
+  }
+
+  .about-buttons {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 80px 20px;
+  }
+
+  .resume-grid {
+    gap: 24px;
+  }
+
+  .resume-card {
+    padding: 28px;
+  }
+
+  .resume-card h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-section {
+    padding: 80px 20px;
+  }
+
+  .contact-form {
+    padding: 28px;
+  }
+
+  .contact-card {
+    padding: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .social-section {
+    padding: 80px 20px;
+  }
+
+  .social-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px;
+  }
+
+  .social-content h2 {
+    margin-top: 10px;
+  }
+
+  .social-grid {
+    gap: 24px;
+  }
+}
