@@ -8,6 +8,7 @@
   gap: clamp(40px, 6vw, 100px);
   padding: 0 clamp(20px, 5vw, 80px);
 }
+
 .allmenu {
   /* min-height: 100vh; */
   /* width: 100%; */
@@ -88,23 +89,14 @@ ul.menu li {
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 2.5em;
-
   color: #ff4d6d;
-
   border-radius: 50%;
-
   cursor: pointer;
-
   transition: 0.4s ease;
-
   z-index: 1;
-
   position: relative;
-
   backdrop-filter: blur(10px);
-
   box-shadow:
     0 0 30px rgba(192, 132, 252, 0.35),
     0 0 80px rgba(124, 58, 237, 0.15);
@@ -112,13 +104,11 @@ ul.menu li {
 ul.menu li img {
   width: 30px;
   height: 30px;
-
   object-fit: contain;
-  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.35));
+  /* filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.35)); */
 }
 ul.menu li:hover {
   border-color: rgba(192, 132, 252, 0.5);
-
   box-shadow:
     0 0 15px rgba(192, 132, 252, 0.25),
     0 0 35px rgba(192, 132, 252, 0.12);
@@ -136,15 +126,11 @@ ul.menu li {
 ul.menu li a {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   text-decoration: none;
-
   color: white;
 }
 ul.menu li p {
@@ -161,9 +147,7 @@ ul.menu li p {
 
 .hero-left p:first-child {
   color: #d1d5db;
-
   font-size: 20px;
-
   margin-bottom: 20px;
 }
 
@@ -171,13 +155,11 @@ ul.menu li p {
   font-size: clamp(3rem, 8vw, 6.25rem);
   color: white;
   line-height: 0.9;
-
   font-weight: 700;
 }
 
 .hero-left span {
   background: linear-gradient(45deg, #f0abfc, #c4b5fd);
-
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -185,19 +167,14 @@ ul.menu li p {
 
 .hero-left h2 {
   margin-top: 25px;
-
   font-size: 18px;
-
   letter-spacing: 8px;
-
   color: var(--primary);
 }
 
 .desc {
   margin-top: 30px;
-
   color: #b8b8b8;
-
   line-height: 2;
 }
 .skills-icon {
@@ -210,9 +187,7 @@ ul.menu li p {
 .skills-icon img {
   width: 45px;
   height: 45px;
-
   object-fit: contain;
-
   transition: var(--transition);
 }
 
@@ -227,23 +202,18 @@ ul.menu li p {
 
 .hero-right h1 {
   font-size: clamp(2.5rem, 5vw, 3.75rem);
-
   color: #c084fc;
 }
 
 .hero-right h2 {
   font-size: clamp(2rem, 4vw, 3.25rem);
-
   line-height: 1.1;
-
   color: #5ee7ff;
 }
 
 .hero-right h3 {
   margin-top: 10px;
-
   color: white;
-
   font-size: 28px;
 }
 .feature-list {
@@ -273,75 +243,49 @@ ul.menu li p {
 }
 .tech-card {
   margin-top: 50px;
-
   padding: 30px;
-
   border-radius: 25px;
-
   background: rgba(17, 24, 39, 0.55);
-
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   backdrop-filter: blur(10px);
 }
 
 .tech-card h2 {
   font-size: 28px;
-
   margin-bottom: 25px;
-
   color: white;
 }
 
 .tech-card h3 {
   font-size: 18px;
-
   margin-top: 18px;
-
   color: #5ee7ff;
 }
 
 .tech-card p {
   margin-top: 8px;
-
   color: #bdbdbd;
-
   line-height: 1.8;
 }
 
 .theme-toggle {
   position: absolute;
-
   top: 30px;
   right: 40px;
-
   padding: 14px 28px;
-
   border-radius: 50px;
-
   background: rgba(255, 255, 255, 0.05);
-
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   backdrop-filter: blur(10px);
-
   color: white;
-
   font-size: 16px;
   font-weight: 500;
-
   cursor: pointer;
-
   transition: var(--transition);
-
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.08);
-
-  box-shadow: 0 0 20px rgba(192, 132, 252, 0.4);
-
-  transform: translateY(-2px);
+body:not(.light) ul.menu li img {
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px #fff);
 }

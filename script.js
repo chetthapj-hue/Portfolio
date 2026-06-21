@@ -8,9 +8,9 @@ toggle.onclick = function () {
     menuContainer.classList.toggle("active");
 };
 
-themeBtn.onclick = () => {
-    document.body.classList.toggle("light");
-};
+// themeBtn.onclick = () => {
+//     document.body.classList.toggle("light");
+// };
 
 AOS.init({
     duration: 1200,
@@ -44,6 +44,14 @@ window.addEventListener("load", () => {
 const viewCv = document.getElementById("viewCv");
 
 viewCv.addEventListener("click", () => {
+    window.open(
+        "./image/CV_Chettha.pdf",
+        "_blank"
+    );
+});
+const viewCv1 = document.getElementById("viewCv1");
+
+viewCv1.addEventListener("click", () => {
     window.open(
         "./image/CV_Chettha.pdf",
         "_blank"
