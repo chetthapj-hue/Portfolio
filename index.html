@@ -21,187 +21,141 @@
     <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body>
-    <div class="stars"></div>
-    <div class="aurora"></div>
-    <!-- <div class="theme-toggle" id="themeBtn">Mode</div> -->
-    <div class="loader">
-      <div class="loader-content">
-        <h1 class="loader-logo">&lt;/&gt;</h1>
+    <header class="site-header" id="siteHeader">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="nav-brand" href="#home" aria-label="Chettha portfolio home">
+          <span class="nav-brand-mark">CP</span>
+          <span class="nav-brand-name">Chettha.</span>
+        </a>
 
-        <p class="loader-text">Loading Portfolio...</p>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="navLinks"
+          aria-expanded="false"
+        >
+          <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
 
-        <div class="loader-bar">
-          <span></span>
-        </div>
-      </div>
-    </div>
-    <main class="hero-container">
-      <div class="hero-left" data-aos="fade-right">
-        <p>Hello, I,m</p>
+        <ul class="nav-links" id="navLinks">
+          <li><a class="nav-link active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#resume">Resume</a></li>
+          <li>
+            <a class="nav-link nav-contact" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <h1>
-          Chettha<br />
-          <span>Plukjai</span>
-        </h1>
-        <h2>FULLSTACK DEVELOPER</h2>
-        <p class="desc">
-          I build modern,responsive and scalable<br />
-          web apppications with passion and<br />
-          clean code
+    <main class="hero-container" id="home">
+      <div class="hero-left" data-aos="fade-up">
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1>Chettha <span>Plukjai</span></h1>
+        <p class="hero-role">Full-Stack Developer</p>
+        <p class="hero-desc">
+          I build modern, responsive, and scalable web applications with clean,
+          maintainable code.
         </p>
-        <div class="skills-icon">
-          <img
-            src="./image/html-5.png"
-            alt=""
-            style="width: 40px; height: 40px; object-fit: cover"
-          />
-          <img
-            src="./image/css-3.png"
-            alt=""
-            style="width: 40px; height: 40px; object-fit: cover"
-          />
-          <img
-            src="./image/tailwind-svgrepo-com (1).png"
-            alt=""
-            style="width: 40px; height: 40px; object-fit: cover"
-          />
-          <img
-            src="./image/js.png"
-            alt=""
-            style="width: 40px; height: 40px; object-fit: cover"
-          />
-          <img
-            src="./image/atom.png"
-            alt=""
-            style="width: 40px; height: 40px; object-fit: cover"
-          />
-          <img
-            src="./image/programing.png"
-            alt=""
-            style="width: 40px; height: 40px; object-fit: cover"
-          />
-          <img
-            src="./image/mongodb_original_logo_icon_146424.png"
-            alt=""
-            style="width: 40px; height: 40px; object-fit: cover"
-          />
+
+        <div class="hero-actions">
+          <a class="hero-btn hero-btn-primary" href="#projects">
+            <i class="bx bx-grid-alt" aria-hidden="true"></i>
+            View Projects
+          </a>
+          <button class="hero-btn hero-btn-secondary" id="viewCv" type="button">
+            <i class="bx bx-download" aria-hidden="true"></i>
+            Download CV
+          </button>
         </div>
-        <button id="viewCv">Download CV</button>
       </div>
-      <div class="allmenu" data-aos="zoom-in">
-        <div class="center">
-          <div class="menu-container">
-            <div class="toggle">
-              <i class="bx bx-plus"></i>
+
+      <div class="hero-right" data-aos="fade-up">
+        <article class="developer-card">
+          <p class="developer-label">
+            <span aria-hidden="true"></span>
+            Developer profile
+          </p>
+          <h2>I turn ideas into <strong>digital solutions.</strong></h2>
+
+          <div class="feature-grid" aria-label="Development strengths">
+            <div class="feature">
+              <i class="bx bx-code-alt" aria-hidden="true"></i>
+              <span>Clean Code</span>
             </div>
-            <ul class="menu">
-              <li style="--i: 0">
-                <a href="#about">
-                  <img src="./image/user.png" alt="" />
-                  <p>ABOUT</p>
-                </a>
-              </li>
-
-              <li style="--i: 1">
-                <a href="#skills">
-                  <img src="./image/skill.png" alt="" />
-                  <p>SKILLS</p>
-                </a>
-              </li>
-
-              <li style="--i: 2">
-                <a href="#projects">
-                  <img src="./image/briefcase.png" alt="" />
-                  <p>PROJECTS</p>
-                </a>
-              </li>
-
-              <li style="--i: 3">
-                <a href="#resume">
-                  <img src="./image/resume.png" alt="" />
-                  <p>RESUME</p>
-                </a>
-              </li>
-
-              <li style="--i: 4">
-                <a href="#contact">
-                  <img src="./image/contact-mail.png" alt="" />
-                  <p>CONTACT</p>
-                </a>
-              </li>
-
-              <li style="--i: 5">
-                <a href="#social">
-                  <img src="./image/social.png" alt="" />
-                  <p>SOCIAL</p>
-                </a>
-              </li>
-            </ul>
+            <div class="feature">
+              <i class="bx bx-devices" aria-hidden="true"></i>
+              <span>Responsive Design</span>
+            </div>
+            <div class="feature">
+              <i class="bx bx-tachometer" aria-hidden="true"></i>
+              <span>Performance</span>
+            </div>
+            <div class="feature">
+              <i class="bx bx-user-check" aria-hidden="true"></i>
+              <span>User Experience</span>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="hero-right" data-aos="fade-left">
-        <h1>&lt;/&gt;</h1>
-        <div>
-          <h2>I turn ideas into</h2>
-          <h3>digital solutions.</h3>
-        </div>
-        <div>
-          <!-- <hr style="border: 1px solid gray; width: 50%" /> -->
-        </div>
-        <div class="feature-list">
-          <div class="feature">
-            <img src="./image/code_icon-icons.com_73620.png" alt="" />
-            <span>Clean Code</span>
+
+          <div class="tech-stack">
+            <h3>Tech Stack</h3>
+            <div class="stack-group">
+              <p>Frontend</p>
+              <div class="stack-badges">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Tailwind CSS</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p>Backend</p>
+              <div class="stack-badges">
+                <span>Node.js</span>
+                <span>Express.js</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p>Database</p>
+              <div class="stack-badges">
+                <span>MongoDB</span>
+                <span>MySQL</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
           </div>
-          <div class="feature">
-            <img src="./image/responsive.png" alt="" />
-            <span>Responsive Design</span>
-          </div>
-          <div class="feature">
-            <img src="./image/performance.png" alt="" />
-            <span>Performance</span>
-          </div>
-          <div class="feature">
-            <img src="./image/user-experience.png" alt="" />
-            <span>User Experience</span>
-          </div>
-        </div>
-        <div class="tech-card">
-          <h2>Tech Stack</h2>
-          <h3>Forontend</h3>
-          <p>HTML,CSS,JavaScrip,React,tailwind</p>
-          <h3>Backend</h3>
-          <p>Node.js,Express</p>
-          <h3>Database</h3>
-          <p>MongoDB,MySQL,PostgreSQL</p>
-        </div>
+        </article>
       </div>
     </main>
     <section id="about" class="about-section">
       <div class="about-wrapper">
         <div class="about-left">
-          <p class="about-mini" data-aos="fade-right">👋 ABOUT ME</p>
+          <p class="about-mini" data-aos="fade-up">About me</p>
 
-          <h1 data-aos="fade-right">Hi, I’m <span>Chettha Plukjai</span></h1>
+          <h1 data-aos="fade-up">Hi, I&rsquo;m <span>Chettha Plukjai</span></h1>
 
-          <p class="about-text" data-aos="fade-right">
-            A passionate Junior Fullstack Developer who recently completed an
+          <p class="about-text" data-aos="fade-up">
+            A passionate Junior Full-Stack Developer who recently completed an
             intensive Junior Software Developer Bootcamp at Generation Thailand.
           </p>
 
-          <p class="about-text" data-aos="fade-right">
+          <p class="about-text" data-aos="fade-up">
             I enjoy building modern web applications from end to end, from
             designing database structures and backend systems to creating smooth
             and interactive user experiences.
           </p>
 
-          <p class="about-text" data-aos="fade-right">
+          <p class="about-text" data-aos="fade-up">
             What excites me the most is solving complex logic problems and
             debugging challenging issues until everything works perfectly.
           </p>
 
-          <div class="about-buttons" data-aos="fade-right">
+          <div class="about-buttons" data-aos="fade-up">
             <button class="about-btn" id="viewCv1">Download CV</button>
 
             <a
@@ -223,10 +177,10 @@
         </div>
 
         <div class="about-right">
-          <div class="glass-card" data-aos="fade-left">
-            <h2 data-aos="fade-left">⚡ Tech Stack</h2>
+          <div class="glass-card" data-aos="fade-up">
+            <h2>Tech Stack</h2>
 
-            <div class="tech-grid" data-aos="fade-left">
+            <div class="tech-grid">
               <span>MERN Stack</span>
               <span>React</span>
               <span>Node.js</span>
@@ -237,25 +191,25 @@
             </div>
           </div>
 
-          <div class="glass-card" data-aos="fade-left">
-            <h2>🎯 Career Goal</h2>
+          <div class="glass-card" data-aos="fade-up">
+            <h2>Career Goal</h2>
 
             <p>
-              My goal is to grow into a Senior Fullstack Developer who can
+              My goal is to grow into a Senior Full-Stack Developer who can
               design scalable architectures, solve complex real-world problems,
               and create innovative digital solutions for the future.
             </p>
           </div>
 
-          <div class="experience-box" data-aos="fade-left">
+          <div class="experience-box" data-aos="fade-up">
             <div>
               <h3>Frontend</h3>
-              <p>React / Tailwind / JavaScript</p>
+              <p>React / Tailwind CSS / JavaScript</p>
             </div>
 
             <div>
               <h3>Backend</h3>
-              <p>Node.js / Express / API</p>
+              <p>Node.js / Express.js / API</p>
             </div>
 
             <div>
@@ -268,7 +222,7 @@
     </section>
     <section id="skills" class="skills-section">
       <div class="skills-top">
-        <p class="skills-mini">⚡ MY SKILLS</p>
+        <p class="skills-mini">My skills</p>
 
         <h1>
           Technologies I Use To
@@ -276,56 +230,62 @@
         </h1>
 
         <p class="skills-desc">
-          I focus on building scalable, responsive and modern fullstack
+          I focus on building scalable, responsive, and modern full-stack
           applications with clean architecture and smooth user experiences.
         </p>
       </div>
 
       <div class="skills-grid">
-        <div class="skill-card" data-aos="zoom-in">
-          <img src="./image/html-5.png" alt="" />
+        <div class="skill-card" data-aos="fade-up">
+          <img src="./image/html-5.png" alt="HTML5" />
           <h3>HTML5</h3>
           <p>Semantic and accessible web structure.</p>
         </div>
 
-        <div class="skill-card" data-aos="zoom-in">
-          <img src="./image/css-3.png" alt="" />
+        <div class="skill-card" data-aos="fade-up">
+          <img src="./image/css-3.png" alt="CSS3" />
           <h3>CSS3</h3>
           <p>Responsive layouts and modern styling.</p>
         </div>
 
-        <div class="skill-card" data-aos="zoom-in">
-          <img src="./image/js.png" alt="" />
+        <div class="skill-card" data-aos="fade-up">
+          <img src="./image/js.png" alt="JavaScript" />
           <h3>JavaScript</h3>
           <p>Interactive frontend and logic building.</p>
         </div>
 
-        <div class="skill-card" data-aos="zoom-in">
-          <img src="./image/atom.png" alt="" />
+        <div class="skill-card" data-aos="fade-up">
+          <img src="./image/atom.png" alt="React" />
           <h3>React</h3>
           <p>Modern component-based UI development.</p>
         </div>
 
-        <div class="skill-card" data-aos="zoom-in">
-          <img src="./image/programing.png" alt="" />
+        <div class="skill-card" data-aos="fade-up">
+          <img src="./image/programing.png" alt="Node.js" />
           <h3>Node.js</h3>
           <p>Backend development and REST APIs.</p>
         </div>
 
-        <div class="skill-card" data-aos="zoom-in">
-          <img src="./image/mongodb_original_logo_icon_146424.png" alt="" />
+        <div class="skill-card" data-aos="fade-up">
+          <img
+            src="./image/mongodb_original_logo_icon_146424.png"
+            alt="MongoDB"
+          />
           <h3>MongoDB</h3>
           <p>NoSQL database for scalable applications.</p>
         </div>
 
-        <div class="skill-card" data-aos="zoom-in">
-          <img src="./image/tailwind-svgrepo-com (1).png" alt="" />
+        <div class="skill-card" data-aos="fade-up">
+          <img
+            src="./image/tailwind-svgrepo-com (1).png"
+            alt="Tailwind CSS"
+          />
           <h3>Tailwind CSS</h3>
           <p>Utility-first modern UI styling.</p>
         </div>
 
-        <div class="skill-card" data-aos="zoom-in">
-          <img src="./image/mysql-database.png" alt="" />
+        <div class="skill-card" data-aos="fade-up">
+          <img src="./image/mysql-database.png" alt="MySQL" />
           <h3>MySQL</h3>
           <p>Relational database management system.</p>
         </div>
@@ -333,10 +293,10 @@
     </section>
     <section id="projects" class="projects-section">
       <div class="projects-top">
-        <p class="projects-mini">🚀 FEATURED PROJECTS</p>
+        <p class="projects-mini">Featured projects</p>
 
         <h1>
-          Things I’ve
+          Things I&rsquo;ve
           <span>Built & Designed</span>
         </h1>
 
@@ -348,16 +308,19 @@
 
       <div class="projects-grid">
         <!-- PROJECT 1 -->
-        <div class="project-card" data-aos="fade-down-right">
+        <div class="project-card" data-aos="fade-up">
           <div class="project-image">
-            <img src="./image/project1.png" alt="" />
+            <img
+              src="./image/project1.png"
+              alt="Job Application System interface"
+            />
           </div>
 
           <div class="project-content">
             <h2>Job Application System</h2>
 
             <p>
-              A fullstack recruitment platform with authentication, admin
+              A full-stack recruitment platform with authentication, admin
               dashboard and application management system.
             </p>
 
@@ -365,20 +328,33 @@
               <span>React</span>
               <span>Node.js</span>
               <span>MongoDB</span>
-              <span>Express</span>
+              <span>Express.js</span>
             </div>
 
             <div class="project-buttons">
-              <a href="#">Live Demo</a>
-              <a href="#">Github</a>
+              <a
+                href="https://teamproject7-jsd11.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/KatisaMeaw/teamproject7-jsd11"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
             </div>
           </div>
         </div>
 
         <!-- PROJECT 2 -->
-        <div class="project-card" data-aos="fade-down-left">
+        <div class="project-card" data-aos="fade-up">
           <div class="project-image">
-            <img src="./image/myportfolio.png" alt="" />
+            <img
+              src="./image/myportfolio.png"
+              alt="Modern Portfolio interface"
+            />
           </div>
 
           <div class="project-content">
@@ -396,46 +372,56 @@
             </div>
 
             <div class="project-buttons">
-              <a href="#">Live Demo</a>
-              <a href="#">Github</a>
+              <a
+                href="https://portfoli-chettha.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/chetthapj-hue/Portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
             </div>
           </div>
         </div>
 
         <!-- PROJECT 3 -->
-        <div class="project-card" data-aos="fade-up-right">
+        <!-- <div class="project-card" data-aos="fade-up">
           <div class="project-image">
             <img src="" alt="" />
           </div>
 
           <div class="project-content">
-            <!-- <h2>Task Management App</h2> -->
+            <h2>Task Management App</h2>
 
-            <!-- <p>
+            <p>
               Productivity application with CRUD operations, task filtering and
               authentication system.
-            </p> -->
+            </p>
 
-            <!-- <div class="project-tech">
+            <div class="project-tech">
               <span>React</span>
-              <span>Tailwind</span>
+              <span>Tailwind CSS</span>
               <span>Firebase</span>
-            </div> -->
+            </div>
 
-            <!-- <div class="project-buttons">
+            <div class="project-buttons">
               <a href="#">Live Demo</a>
-              <a href="#">Github</a>
-            </div> -->
+              <a href="#">GitHub</a>
+            </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- PROJECT 4 -->
-        <div class="project-card" data-aos="fade-up-left">
+        <!-- <div class="project-card" data-aos="fade-up">
           <div class="project-image">
             <img src="" alt="" />
           </div>
 
-          <!-- <div class="project-content">
+          <div class="project-content">
             <h2>REST API Authentication</h2>
 
             <p>
@@ -445,22 +431,22 @@
 
             <div class="project-tech">
               <span>Node.js</span>
-              <span>Express</span>
+              <span>Express.js</span>
               <span>JWT</span>
               <span>MongoDB</span>
             </div>
 
             <div class="project-buttons">
               <a href="#">Live Demo</a>
-              <a href="#">Github</a>
+              <a href="#">GitHub</a>
             </div>
-          </div> -->
-        </div>
+          </div>
+        </div> -->
       </div>
     </section>
     <section id="resume" class="resume-section">
       <div class="resume-top">
-        <p class="resume-mini">📄 MY RESUME</p>
+        <p class="resume-mini">My resume</p>
 
         <h1>
           Experience &
@@ -475,33 +461,33 @@
 
       <div class="resume-grid">
         <!-- EDUCATION -->
-        <div class="resume-card" data-aos="fade-right">
-          <h2>🎓 Education</h2>
+        <div class="resume-card" data-aos="fade-up">
+          <h2>Education</h2>
 
           <div class="resume-item">
             <h3>Generation Thailand</h3>
 
             <p class="resume-role">Junior Software Developer Bootcamp</p>
 
-            <span class="resume-date"> Oct 2025 — Jan 2026 </span>
+            <span class="resume-date">Oct 2025 - Jan 2026</span>
 
             <ul>
               <li>Agile Workflow</li>
               <li>Team Collaboration</li>
               <li>MERN Stack Development</li>
-              <li>Git & Github Workflow</li>
+              <li>Git &amp; GitHub Workflow</li>
             </ul>
           </div>
         </div>
 
         <!-- EXPERIENCE -->
-        <div class="resume-card" data-aos="fade-left">
-          <h2>💼 Experience</h2>
+        <div class="resume-card" data-aos="fade-up">
+          <h2>Experience</h2>
 
           <div class="resume-item">
             <h3>Office Syndrome Ergonomics</h3>
 
-            <p class="resume-role">Fullstack MERN Team Project</p>
+            <p class="resume-role">Full-Stack MERN Team Project</p>
 
             <span class="resume-date"> 2025 </span>
 
@@ -516,15 +502,15 @@
         </div>
 
         <!-- TECH STACK -->
-        <div class="resume-card" data-aos="fade-up-right">
-          <h2>⚡ Tech Stack</h2>
+        <div class="resume-card" data-aos="fade-up">
+          <h2>Tech Stack</h2>
 
           <div class="skill-tags">
             <span>HTML</span>
             <span>CSS</span>
             <span>JavaScript</span>
             <span>React</span>
-            <span>Tailwind</span>
+            <span>Tailwind CSS</span>
             <span>Node.js</span>
             <span>Express.js</span>
             <span>MongoDB</span>
@@ -534,8 +520,8 @@
         </div>
 
         <!-- LINKS -->
-        <div class="resume-card" data-aos="fade-up-left">
-          <h2>🔗 Links</h2>
+        <div class="resume-card" data-aos="fade-up">
+          <h2>Links</h2>
 
           <div class="resume-links">
             <a
@@ -543,7 +529,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Github
+              GitHub
             </a>
 
             <a
@@ -557,7 +543,7 @@
             <a href="#"> Portfolio </a>
 
             <a
-              href="./image/CV_Chettha.pdf"
+              href="./image/Chettha.portfolio.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -569,24 +555,26 @@
     </section>
     <section id="contact" class="contact-section">
       <div class="contact-top">
-        <p class="contact-mini">📩 CONTACT</p>
+        <p class="contact-mini">Contact</p>
 
         <h1>
-          Let’s Work
+          Let&rsquo;s Work
           <span>Together</span>
         </h1>
 
         <p class="contact-desc">
           Feel free to reach out for collaboration, projects, or just to say
-          hello 👋
+          hello.
         </p>
       </div>
 
       <div class="contact-container">
         <!-- LEFT -->
-        <div class="contact-info" data-aos="fade-right">
+        <div class="contact-info" data-aos="fade-up">
           <div class="contact-card">
-            <div class="contact-icon">📧</div>
+            <div class="contact-icon">
+              <i class="bx bx-envelope" aria-hidden="true"></i>
+            </div>
 
             <div>
               <h3>Email</h3>
@@ -595,7 +583,9 @@
           </div>
 
           <div class="contact-card">
-            <div class="contact-icon">📱</div>
+            <div class="contact-icon">
+              <i class="bx bx-phone" aria-hidden="true"></i>
+            </div>
 
             <div>
               <h3>Phone</h3>
@@ -604,7 +594,9 @@
           </div>
 
           <div class="contact-card">
-            <div class="contact-icon">🌍</div>
+            <div class="contact-icon">
+              <i class="bx bx-map" aria-hidden="true"></i>
+            </div>
 
             <div>
               <h3>Location</h3>
@@ -618,7 +610,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Github
+              GitHub
             </a>
 
             <a
@@ -634,22 +626,35 @@
         </div>
 
         <!-- RIGHT -->
-        <form class="contact-form" id="contactForm" data-aos="fade-left">
+        <form class="contact-form" id="contactForm" data-aos="fade-up">
           <div class="input-box">
-            <input type="text" name="name" placeholder="Your Name" required />
-          </div>
-
-          <div class="input-box">
+            <label class="sr-only" for="contactName">Your name</label>
             <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
+              id="contactName"
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              autocomplete="name"
               required
             />
           </div>
 
           <div class="input-box">
+            <label class="sr-only" for="contactEmail">Your email</label>
+            <input
+              id="contactEmail"
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label class="sr-only" for="contactMessage">Your message</label>
             <textarea
+              id="contactMessage"
               name="message"
               placeholder="Your Message"
               required
@@ -661,35 +666,47 @@
     </section>
     <section id="social" class="social-section">
       <div class="social-top">
-        <p class="social-mini">🌐 SOCIAL LINKS</p>
+        <p class="social-mini">Social links</p>
 
         <h1>
-          Let’s Connect
+          Let&rsquo;s Connect
           <span>Online</span>
         </h1>
 
         <p class="social-desc">
           You can find me on these platforms. Feel free to connect, follow, or
-          collaborate 🚀
+          collaborate.
         </p>
       </div>
 
       <div class="social-grid">
-        <a href="#" class="social-card" data-aos="zoom-in">
+        <a
+          href="https://github.com/chetthapj-hue"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-card"
+          data-aos="fade-up"
+        >
           <div class="social-icon">
-            <i class="bx bxl-github"></i>
+            <i class="bx bxl-github" aria-hidden="true"></i>
           </div>
 
           <div class="social-content">
-            <h2>Github</h2>
+            <h2>GitHub</h2>
 
             <p>Explore my projects, repositories, and development journey.</p>
           </div>
         </a>
 
-        <a href="#" class="social-card" data-aos="zoom-in">
+        <a
+          href="https://www.linkedin.com/in/chettha-plukjai/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-card"
+          data-aos="fade-up"
+        >
           <div class="social-icon">
-            <i class="bx bxl-linkedin"></i>
+            <i class="bx bxl-linkedin" aria-hidden="true"></i>
           </div>
 
           <div class="social-content">
@@ -699,9 +716,9 @@
           </div>
         </a>
 
-        <a href="#" class="social-card" data-aos="zoom-in">
+        <a href="#contact" class="social-card" data-aos="fade-up">
           <div class="social-icon">
-            <i class="bx bx-envelope"></i>
+            <i class="bx bx-envelope" aria-hidden="true"></i>
           </div>
 
           <div class="social-content">
@@ -714,9 +731,15 @@
           </div>
         </a>
 
-        <a href="#" class="social-card" data-aos="zoom-in">
+        <a
+          href="https://www.instagram.com/pj_chettha/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-card"
+          data-aos="fade-up"
+        >
           <div class="social-icon">
-            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-instagram" aria-hidden="true"></i>
           </div>
 
           <div class="social-content">
@@ -727,7 +750,7 @@
         </a>
       </div>
     </section>
-    <button id="topBtn">
+    <button id="topBtn" type="button" aria-label="Back to top">
       <i class="bx bx-up-arrow-alt"></i>
     </button>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

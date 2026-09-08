@@ -1,6 +1,6 @@
 .resume-section {
   min-height: 100vh;
-  padding: 120px clamp(20px, 5vw, 80px);
+  padding: 112px clamp(20px, 5vw, 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,13 +14,15 @@
 
 .resume-mini {
   color: var(--primary);
-  letter-spacing: 5px;
-  font-size: 14px;
-  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-transform: uppercase;
 }
 
 .resume-top h1 {
-  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-size: 4rem;
   line-height: 1.2;
 }
 
@@ -35,38 +37,37 @@
   margin-top: 25px;
   color: var(--text-soft);
   font-size: 18px;
-  line-height: 2;
+  line-height: 1.8;
 }
 
 .resume-grid {
-  margin-top: 80px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 56px auto 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .resume-card {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 40px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
+  padding: 34px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
   transition: var(--transition);
 }
 
 .resume-card:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 0 20px rgba(192, 132, 252, 0.18),
-    0 0 50px rgba(192, 132, 252, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(155, 124, 255, 0.38);
+  box-shadow: var(--shadow-soft);
 }
 
 .resume-card h2 {
-  font-size: 32px;
+  font-size: 27px;
   margin-bottom: 30px;
   color: var(--text-main);
 }
@@ -100,22 +101,21 @@
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 9px;
 }
 
 .skill-tags span {
-  padding: 12px 18px;
+  padding: 8px 12px;
   font-size: 14px;
-  border-radius: 50px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: var(--transition);
 }
 
 .skill-tags span:hover {
-  transform: translateY(-4px);
-
-  box-shadow: 0 0 20px rgba(103, 232, 249, 0.25);
+  transform: translateY(-2px);
+  border-color: rgba(85, 216, 238, 0.4);
 }
 
 .resume-links {
@@ -127,7 +127,7 @@
 
 .resume-links a {
   padding: 16px 22px;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   color: var(--text-main);
   background: rgba(255, 255, 255, 0.06);
@@ -136,6 +136,7 @@
 }
 
 .resume-links a:hover {
-  transform: translateX(8px);
-  background: linear-gradient(45deg, #c084fc, #7c3aed);
+  transform: translateX(4px);
+  border-color: rgba(155, 124, 255, 0.45);
+  background: rgba(155, 124, 255, 0.12);
 }
