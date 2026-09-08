@@ -1,6 +1,6 @@
 .contact-section {
   min-height: 100vh;
-  padding: 120px clamp(20px, 5vw, 80px);
+  padding: 112px clamp(20px, 5vw, 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,13 +14,15 @@
 
 .contact-mini {
   color: var(--primary);
-  letter-spacing: 5px;
-  font-size: 14px;
-  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-transform: uppercase;
 }
 
 .contact-top h1 {
-  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-size: 4rem;
   line-height: 1.2;
 }
 
@@ -36,14 +38,16 @@
   margin-top: 25px;
   color: var(--text-soft);
   font-size: 18px;
-  line-height: 2;
+  line-height: 1.8;
 }
 
 .contact-container {
-  margin-top: 80px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 56px auto 0;
   display: flex;
   align-items: stretch;
-  gap: 50px;
+  gap: 32px;
   justify-content: space-between;
 }
 
@@ -55,11 +59,10 @@
 }
 
 .contact-card {
-  padding: 28px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
   display: flex;
   align-items: center;
   gap: 20px;
@@ -67,17 +70,16 @@
 }
 
 .contact-card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 0 20px rgba(192, 132, 252, 0.18),
-    0 0 45px rgba(192, 132, 252, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(155, 124, 255, 0.38);
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 18px;
-  background: linear-gradient(45deg, #c084fc, #7c3aed);
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(155, 124, 255, 0.14);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +104,7 @@
 
 .social-links a {
   padding: 14px 22px;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   color: var(--text-main);
   background: rgba(255, 255, 255, 0.06);
@@ -111,17 +113,17 @@
 }
 
 .social-links a:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(45deg, #ff00cc, #7c3aed);
+  transform: translateY(-2px);
+  border-color: rgba(155, 124, 255, 0.45);
+  background: rgba(155, 124, 255, 0.12);
 }
 
 .contact-form {
   flex: 1.4;
-  padding: 40px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
+  padding: 34px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
 }
 
 .input-box {
@@ -132,7 +134,7 @@
 .input-box textarea {
   width: 100%;
   padding: 18px 22px;
-  border-radius: 18px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
   color: var(--text-main);
@@ -148,9 +150,9 @@
 .contact-form button {
   width: 100%;
   padding: 18px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
-  background: linear-gradient(45deg, #ff00cc, #7c3aed);
+  background: var(--primary-strong);
   color: var(--text-main);
   font-size: 17px;
   cursor: pointer;
@@ -158,11 +160,11 @@
 }
 
 .contact-form button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(192, 132, 252, 0.35);
+  transform: translateY(-2px);
+  background: #8b6dff;
 }
 .input-box input:focus,
 .input-box textarea:focus {
-  border-color: rgba(192, 132, 252, 0.5);
-  box-shadow: 0 0 0 4px rgba(192, 132, 252, 0.08);
+  border-color: rgba(155, 124, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(155, 124, 255, 0.08);
 }
